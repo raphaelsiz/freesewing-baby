@@ -1,0 +1,24 @@
+{
+  "name": "freesewing-baby",
+  "version": "1.0.0",
+  "description": "Generate a baby measurement set based on a single measurement",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphaelsiz/freesewing-baby.git"
+  },
+  "keywords": [
+    "sewing",
+    "pattern",
+    "freeSewing"
+  ],
+  "author": "mergerg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raphaelsiz/freesewing-baby/issues"
+  },
+  "homepage": "https://github.com/raphaelsiz/freesewing-baby#readme"
+}
