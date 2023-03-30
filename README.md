@@ -33,7 +33,8 @@ In your package.json, make sure you have set `"type": "module"` somewhere.
 In your index.js file:
 ```js
 import { Pattern } from '@freesewing/pattern' //again, replace "Pattern" and "pattern" with the specific pattern you want to use. Make sure the pattern inside the brackets is capitalized, as this is a named export.
-import {pluginTheme as theme} from '@freesewing/plugin-theme'
+import { pluginTheme as theme } from '@freesewing/plugin-theme' //theme optional but recommended
+import { measurementsPlugin } from '@freesewing/plugin-measurements'
 import Baby from 'freesewing-baby' //you can name this import whatever you want
 ```
 ### Pattern generation
@@ -46,7 +47,7 @@ const svg = new Pattern({
     options: {
         //insert any required options for the pattern here
     }
-})
+}).use(theme).use(measurementsPlugin).draft().render()
 ```
 If you would rather work in a measurement other than millimeters, you can add a second argument:
 ```js
