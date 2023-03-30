@@ -1,8 +1,25 @@
 # freesewing-baby
 An NPM package to generate measurements to create freesewing patterns for babies based on a single measurement
-## Usage
+# Usage
+## Just generating measurements
+If you prefer to just generate some measurements to manually add to FreeSewing, here's the easy way to do it.
+
+In your terminal/console (in your node package directory):
+```console
+npm install freesewing-baby
+```
+In your index.js file:
+```js
+import Baby from 'freesewing-baby'
+const measurements = new Baby(440) //44 cm waist
+console.log(measurements)
+```
+By default, freesewing-baby assumes you're using millimeters and want millimeters back. To change this, use the second argument to specify what measurements you're passing in and the third to specify what measurements you're wanting back.
+
+For example, if you're using inches and want millimeters back, you could do `Baby(17,"in")`. If you want inches back, you can do `Baby(17,"in","in")`. Both arguments accept "in", "mm", or "cm". In order to request something other than millimeters back, you must pass in all three arguments.
+## Generating whole pattern in node.js
 ### Installation
-In your terminal/console (assuming you have node installed):
+In your terminal/console (in your node package directory):
 ```console
 npm install @freesewing/core@next @freesewing/plugin-bundle@next @freesewing/utils@next
 npm install @freesewing/pattern@next freesewing-baby
@@ -20,6 +37,7 @@ import {pluginTheme as theme} from '@freesewing/plugin-theme'
 import Baby from 'freesewing-baby' //you can name this import whatever you want
 ```
 ### Pattern generation
+To generate a pattern with the Pattern you imported, put something like this in your index.js, updated with the actual design and seam allowance you want to use and your baby's waist measurement. The package assumes you're using millimeters as your measurement unless you specify.
 ```js
 const waistInMillimeters = 440 //if your baby's waist is about 44 centimeters (a bit over 17 inches)
 const svg = new Pattern({
@@ -30,4 +48,8 @@ const svg = new Pattern({
     }
 })
 ```
-With this
+If you would rather work in a measurement other than millimeters, you can currently do this:
+```js
+const measurements = new Baby(17,"in")
+```
+This only works with "in", "mm", or "cm" as the second argument. If you have a reason that you want a different measurement added, let me know.
