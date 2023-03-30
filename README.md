@@ -48,8 +48,31 @@ const svg = new Pattern({
     }
 })
 ```
-If you would rather work in a measurement other than millimeters, you can currently do this:
+If you would rather work in a measurement other than millimeters, you can add a second argument:
 ```js
-const measurements = new Baby(17,"in")
+measurements : new Baby(17,"in")
 ```
 This only works with "in", "mm", or "cm" as the second argument. If you have a reason that you want a different measurement added, let me know.
+
+### Printable PDF or SVG
+The above code just returns a string `svg` with the contents of an svg image. In order to actually get a working pattern, you'll first need to save the svg. This will require the fs module or something similar.
+
+First, install fs:
+```console
+npm install fs
+```
+```js
+import fs from 'fs'
+```
+Then, you can save an SVG file like so:
+```js
+fs.writeFile('./path/to/fileYouWant.svg', svg, err => {
+  if (err) {
+      console.error(err);
+  }
+  else console.log("File written successfully!")
+});
+```
+Note the console logging and error are not strictly necessary, but can be helpful to determine if something goes wrong.
+
+If you want to turn your pattern into something you can print, use [FreeSewing's tiler tool](https://tiler.freesewing.org/) and upload the SVG you generated. It can convert it to a printable PDF for several different paper sizes.
