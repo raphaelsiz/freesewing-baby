@@ -55,7 +55,7 @@ export default function(waistMeasured,measurementsUsed,measurementsRequested) {
         waistToUpperLeg: 0,
         wrist: 0
     }
-    switch (measurementsRequested) {
+    switch (requested) {
         case "in":
             for (let measurement in measurements) {
                 measurements[measurement] = measurement/25.4
