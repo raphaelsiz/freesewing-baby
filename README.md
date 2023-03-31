@@ -89,4 +89,4 @@ import Baby, {tests} from 'freesewing-baby'
 tests.createAaron(new Baby(500),'./tests/aaron.svg')
 tests.createBrian(new Baby(550),'./tests/brian.svg')
 ```
-The second argument is a URL of where you would like the SVG to be stored. The file doesn't have to exist when you run the test, but the directory does. You don't have to have the `tests` folder or anything, just choose a file path.
+The second argument is a URL of where you would like the SVG to be stored. The file doesn't have to exist when you run the test, but the directory does. You don't have to have the `tests` folder or anything, just choose a relative *or* absolute file path.
