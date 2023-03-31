@@ -81,3 +81,12 @@ fs.writeFile('./path/to/fileYouWant.svg', svg, err => {
 Note the console logging and error are not strictly necessary, but can be helpful to determine if something goes wrong.
 
 If you want to turn your pattern into something you can print, use [FreeSewing's tiler tool](https://tiler.freesewing.org/) and upload the SVG you generated. It can convert it to a printable PDF for several different paper sizes.
+
+## Running tests
+The package has a couple of inbuilt tests. If you want, you can generate your own Aaron or Brian from them. The Charlie test currently doesn't work, but here's how to do the others:
+```js
+import Baby, {tests} from 'freesewing-baby'
+tests.createAaron(new Baby(500),'./tests/aaron.svg')
+tests.createBrian(new Baby(550),'./tests/brian.svg')
+```
+The second argument is a URL of where you would like the SVG to be stored. The file doesn't have to exist when you run the test, but the directory does. You don't have to have the `tests` folder or anything, just choose a file path.
