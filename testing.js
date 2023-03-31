@@ -51,58 +51,40 @@ async function createApiKey() {
       )
     //console.log(key)
 }*/
-function createBrian(measurements) {
+function createBrian(measurements,url) {
     const svg = new Brian({
         sa: 10,
         measurements
     }).use(theme).draft().render()
-    fs.writeFile('./tests/testBrian.svg', svg, err => {
+    fs.writeFile(url, svg, err => {
         if (err) {
             console.error(err);
         }
         else console.log("File written successfully!")
       });
-    fs.writeFile('./tests/testMeasurements.json', Buffer.from(JSON.stringify(measurements,null, '\t')), err => {
-        if (err) {
-            console.error(err);
-        }
-        else console.log("File written successfully!")
-    })
 }
-function createAaron(measurements) {
+function createAaron(measurements,url) {
     const svg = new Aaron({
         sa: 10,
         measurements
     }).use(theme).draft().render()
-    fs.writeFile('./tests/testAaron.svg', svg, err => {
+    fs.writeFile(url, svg, err => {
         if (err) {
             console.error(err);
         }
         else console.log("File written successfully!")
       });
-    fs.writeFile('./tests/testMeasurements.json', Buffer.from(JSON.stringify(measurements,null, '\t')), err => {
-        if (err) {
-            console.error(err);
-        }
-        else console.log("File written successfully!")
-    })
 }
-function createCharlie(measurements) {
+function createCharlie(measurements,url) {
     const svg = new Charlie({
         sa: 10,
         measurements
     }).use(theme).draft().render()
-    fs.writeFile('./tests/testCharlie.svg', svg, err => {
+    fs.writeFile(url, svg, err => {
         if (err) {
             console.error(err);
         }
         else console.log("File written successfully!")
       });
-    fs.writeFile('./tests/testMeasurements.json', Buffer.from(JSON.stringify(measurements,null, '\t')), err => {
-        if (err) {
-            console.error(err);
-        }
-        else console.log("File written successfully!")
-    })
 }
 export default {createBrian,createAaron,createCharlie}
