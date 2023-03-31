@@ -27,8 +27,8 @@ const measurements = function(waistMeasured,measurementsUsed,measurementsRequest
         head: 0.95*waist,
         heel: 0.3*waist,
         hips: 1.05*waist,
-        hpsToBust: 0.075*waist,
-        hpsToWaistBack: 0.01*waist,
+        hpsToBust: 0.1*waist,
+        hpsToWaistBack: 0.2*waist,
         inseam: 0.5875*waist,
         knee: 0.55*waist,
         neck: 0.5*waist,
@@ -41,9 +41,9 @@ const measurements = function(waistMeasured,measurementsUsed,measurementsRequest
         upperLeg: 0.85*waist,
         waistBack: 0.45*waist,
         waistToFloor: 0.925*waist,
-        waistToHips: 0.075*waist,
-        waistToKnee: 0.25*waist,
-        waistToSeat: 0.15*waist,
+        waistToHips: 0.3*waist,
+        waistToKnee: 0.45*waist,
+        waistToSeat: 0.35*waist,
         waistToUpperLeg: 0.125*waist,
         wrist: 0.275*waist
     }
@@ -63,9 +63,6 @@ const measurements = function(waistMeasured,measurementsUsed,measurementsRequest
         default:
             return console.error(used + " is not a valid measurement!")
     }
-    console.log(waist,used,requested,measurements,measurements.shoulderSlope)
     return measurements;
 }
-measurements(20,"in")
-//tests.createAaron(measurements)
-export {measurements as default}
+export {measurements as default,tests}
