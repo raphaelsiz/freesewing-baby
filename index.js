@@ -1,4 +1,5 @@
-export default function(waistMeasured,measurementsUsed,measurementsRequested) {
+import tests from './testing.js'
+const measurements = function(waistMeasured,measurementsUsed,measurementsRequested) {
     let used = measurementsUsed || "mm";
     let requested = measurementsRequested || "mm";
     let waist;
@@ -48,12 +49,12 @@ export default function(waistMeasured,measurementsUsed,measurementsRequested) {
     }
     switch (requested) {
         case "in":
-            for (let measurement in measurements) {
+            for (let measurement in measurements) if (measurement != "shoulderSlope") {
                 measurements[measurement] = measurement/25.4
             }
             break;
         case "cm":
-            for (let measurement in measurements) {
+            for (let measurement in measurements) if (measurement != "shoulderSlope") {
                 measurements[measurement] = measurement/10
             }
             break;
@@ -62,5 +63,9 @@ export default function(waistMeasured,measurementsUsed,measurementsRequested) {
         default:
             return console.error(used + " is not a valid measurement!")
     }
+    console.log(waist,used,requested,measurements,measurements.shoulderSlope)
     return measurements;
 }
+measurements(20,"in")
+//tests.createAaron(measurements)
+export {measurements as default}
