@@ -1,7 +1,7 @@
 # freesewing-baby
 An NPM package to generate measurements to create freesewing patterns for babies based on a single measurement
 ## Important disclaimer
-This package is a work in progress. The baby measurements have not all been verified, and it seems only the top ones work (aka you can generate a Brian and probably anything based on it, but Charlie currently generates a blank SVG). I will be testing the measurements once I can measure the waist of the infant in my life, and I invite others to test them as well so long as they don't expect a guarantee that the garment will fit. If you try it and the garment fits wrong, please submit an issue with as much detail as possible.
+This package is a work in progress. The baby measurements have not all been verified, and it seems only the top ones work (aka you can generate a Brian and probably anything based on it, but Charlie currently generates a blank SVG). I will be testing the measurements once I can measure the waist of the infant in my life, and I invite others to test them as well so long as they don't expect a guarantee that the garment will fit. If you try it and the garment fits wrong, please submit an [issue](https://github.com/raphaelsiz/freesewing-baby/issues) with as much detail as possible.
 # Usage
 ## Just generating measurements
 If you prefer to just generate some measurements to manually add to FreeSewing, here's the easy way to do it.
