@@ -19,6 +19,8 @@ console.log(measurements)
 By default, freesewing-baby assumes you're using millimeters and want millimeters back. To change this, use the second argument to specify what measurements you're passing in and the third to specify what measurements you're wanting back.
 
 For example, if you're using inches and want millimeters back, you could do `Baby(17,"in")`. If you want inches back, you can do `Baby(17,"in","in")`. Both arguments accept "in", "mm", or "cm". In order to request something other than millimeters back, you must pass in all three arguments.
+## Uploading measurements
+Currently, there is no way to upload measurement sets directly to your account via node, but when v3 comes out, you can use the [API to create a person](https://freesewing.dev/reference/backend/api/people/create). This documentation is also subject to change.
 ## Generating whole pattern in node.js
 ### Installation
 In your terminal/console (in your node package directory):
