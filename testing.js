@@ -51,8 +51,7 @@ async function createApiKey() {
       )
     //console.log(key)
 }*/
-function createBrian(Baby) {
-    let measurements = new Baby(20,"in");
+function createBrian(measurements) {
     const svg = new Brian({
         sa: 10,
         measurements
@@ -70,8 +69,7 @@ function createBrian(Baby) {
         else console.log("File written successfully!")
     })
 }
-function createAaron(Baby) {
-    let measurements = new Baby(20,"in");
+function createAaron(measurements) {
     const svg = new Aaron({
         sa: 10,
         measurements
@@ -89,8 +87,7 @@ function createAaron(Baby) {
         else console.log("File written successfully!")
     })
 }
-function createCharlie(Baby) {
-    let measurements = new Baby(20,"in");
+function createCharlie(measurements) {
     const svg = new Charlie({
         sa: 10,
         measurements
