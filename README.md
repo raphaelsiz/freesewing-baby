@@ -56,6 +56,7 @@ measurements : new Baby(17,"in")
 ```
 This only works with "in", "mm", or "cm" as the second argument. If you have a reason that you want a different measurement added, let me know.
 
+> Important note: While there is a third argument to say what measurement type you want back, if you're generating patterns this way the measurements need to be in millimeters. This generates millimeter measurements by default, so just leave the third argument blank!
 ### Printable PDF or SVG
 The above code just returns a string `svg` with the contents of an svg image. In order to actually get a working pattern, you'll first need to save the svg. This will require the fs module or something similar.
 
