@@ -23,7 +23,7 @@ const measurements = function(waistMeasured,measurementsUsed,measurementsRequest
         chest: waist,
         crossSeam: 0.85*waist,
         crossSeamFront: 0.4*waist,
-        crotchDepth: 0.175*waist,
+        crotchDepth: 0.15*waist,
         head: 0.95*waist,
         heel: 0.3*waist,
         hips: 1.05*waist,
@@ -43,8 +43,8 @@ const measurements = function(waistMeasured,measurementsUsed,measurementsRequest
         waistToFloor: 0.925*waist,
         waistToHips: 0.225*waist,
         waistToKnee: 0.45*waist,
-        waistToSeat: 0.3*waist,
-        waistToUpperLeg: 0.2*waist,
+        waistToSeat: 0.275*waist,
+        waistToUpperLeg: 0.325*waist,
         wrist: 0.25*waist
     }
     switch (requested) {
@@ -65,5 +65,4 @@ const measurements = function(waistMeasured,measurementsUsed,measurementsRequest
     }
     return measurements;
 }
-
 export {measurements as default,tests}
