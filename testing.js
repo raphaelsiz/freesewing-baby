@@ -8,7 +8,7 @@ import fs from 'fs'
 
 dotenv.config()
 
-function createBrian(measurements,url) {
+export function createBrian(measurements,url) {
     const svg = new Brian({
         sa: 10,
         measurements
@@ -20,7 +20,7 @@ function createBrian(measurements,url) {
         else console.log("File written successfully!")
       });
 }
-function createAaron(measurements,url) {
+export function createAaron(measurements,url) {
     const svg = new Aaron({
         sa: 10,
         measurements
@@ -32,7 +32,7 @@ function createAaron(measurements,url) {
         else console.log("File written successfully!")
       });
 }
-function createCharlie(measurements,url) {
+export function createCharlie(measurements,url) {
     const svg = new Charlie({
         sa: 10,
         measurements
