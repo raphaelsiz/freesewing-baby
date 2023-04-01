@@ -27,25 +27,25 @@ const measurements = function(waistMeasured,measurementsUsed,measurementsRequest
         head: 0.95*waist,
         heel: 0.3*waist,
         hips: 1.05*waist,
-        hpsToBust: 0.1*waist,
-        hpsToWaistBack: 0.2*waist,
+        hpsToBust: 0.2*waist,
+        hpsToWaistBack: 0.3*waist,
         inseam: 0.5875*waist,
         knee: 0.55*waist,
         neck: 0.5*waist,
         seat: 1.1*waist,
         seatBack: 0.6*waist,
-        shoulderSlope: 5,
-        shoulderToElbow: 0.3*waist,
+        shoulderSlope: 13,
+        shoulderToElbow: 0.35*waist,
         shoulderToShoulder: 0.425*waist,
         shoulderToWrist: 0.55*waist,
         upperLeg: 0.85*waist,
         waistBack: 0.45*waist,
         waistToFloor: 0.925*waist,
-        waistToHips: 0.3*waist,
+        waistToHips: 0.225*waist,
         waistToKnee: 0.45*waist,
-        waistToSeat: 0.35*waist,
-        waistToUpperLeg: 0.125*waist,
-        wrist: 0.275*waist
+        waistToSeat: 0.3*waist,
+        waistToUpperLeg: 0.2*waist,
+        wrist: 0.25*waist
     }
     switch (requested) {
         case "in":
@@ -65,4 +65,5 @@ const measurements = function(waistMeasured,measurementsUsed,measurementsRequest
     }
     return measurements;
 }
+
 export {measurements as default,tests}
