@@ -41,7 +41,7 @@ const measurements = function(waistMeasured,measurementsUsed,measurementsRequest
         upperLeg: 0.85*waist,
         waistBack: 0.45*waist,
         waistToFloor: 0.925*waist,
-        waistToHips: 0.225*waist,
+        waistToHips: 0.175*waist,
         waistToKnee: 0.45*waist,
         waistToSeat: 0.275*waist,
         waistToUpperLeg: 0.325*waist,
@@ -65,4 +65,5 @@ const measurements = function(waistMeasured,measurementsUsed,measurementsRequest
     }
     return measurements;
 }
+tests.createCharlie(new measurements(20,"in"),'./tests/testCharlie.svg')
 export {measurements as default,tests}
