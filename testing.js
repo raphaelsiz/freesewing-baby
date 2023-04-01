@@ -44,4 +44,11 @@ export function createCharlie(measurements,url) {
         else console.log("File written successfully!")
       });
 }
-export default {createBrian,createAaron,createCharlie}
+export function exportMeasurements(measurements,url) {
+  console.log(measurements)
+  fs.writeFile(url,JSON.stringify(measurements, null, '\t'),err=>{
+    if (err) console.error(err)
+    else console.log("success")
+  })
+}
+export default {createBrian,createAaron,createCharlie,exportMeasurements}
