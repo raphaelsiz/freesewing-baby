@@ -50,12 +50,12 @@ const measurements = function(waistMeasured,measurementsUsed,measurementsRequest
     switch (requested) {
         case "in":
             for (let measurement in measurements) if (measurement != "shoulderSlope") {
-                measurements[measurement] = measurement/25.4
+                measurements[measurement] = measurements[measurement]/25.4
             }
             break;
         case "cm":
             for (let measurement in measurements) if (measurement != "shoulderSlope") {
-                measurements[measurement] = measurement/10
+                measurements[measurement] = measurements[measurement]/10
             }
             break;
         case "mm":
